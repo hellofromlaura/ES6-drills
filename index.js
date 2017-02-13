@@ -25,7 +25,9 @@ console.log(arr);
 
 // Rewrite the following code to use arrow functions and default arguments:
 
-function createArray(items) {
+
+
+const createArray = items => {
     items = items || 10;
     let arr = [];
     for (let i=0; i<items; i++) {
@@ -34,20 +36,19 @@ function createArray(items) {
     return arr;
 }
 
-// let arr = createArray();
+let arr = createArray();
 
-// arr = arr.filter(function(item) {
-//     return item < 40;
-// });
+arr = arr.filter((item) => item < 40);
 
-// arr = arr.map(function(item) {
-//     return item * 2;
-// });
+arr = arr.map((item) => item * 2);
 
-// arr.forEach(function(item, index) {
-//     console.log('Index:', index);
-//     console.log('Item:', item);
-// });
+arr.forEach((item, index) => {
+    console.log('Index:', index);
+    console.log('Item:', item);
+});
+console.log(arr);
+
+
 // // Objects drill
 
 // // Use Object.assign to merge these three objects into a single new object. Then use object destructuring to split them out into separate variables. Finally use the enhanced object literal syntax to merge the variables back into three more objects which are identical to the originals.
